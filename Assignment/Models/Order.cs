@@ -21,6 +21,8 @@ namespace Assignment.Models
 
         public decimal NetAmount { get; set; }
 
+        public decimal TotalDiscount { get; set; }
+
         // 
         /// <summary>
         /// Design Pattern : Aggregate root pattern
@@ -34,6 +36,15 @@ namespace Assignment.Models
             {
                 this.Promotions.Add(promotion);
             }
+        }
+
+        /// <summary>
+        /// Implementation of Iterator pattern
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Promotion> GetPromotions()
+        {
+            return this.Promotions;
         }
 
     }

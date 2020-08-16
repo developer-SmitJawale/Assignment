@@ -11,7 +11,7 @@ namespace Assignment.Engine
     /// </summary>
     public abstract class DiscountEngine
     {
-        public virtual Promotion MyProperty { get; set; }
+        public virtual Promotion Promotion { get; set; }
 
         public OrderBase OrderBase { get; set; }
 
