@@ -40,6 +40,14 @@ namespace UnitTestAssignment
 
             order.AddPromotion(new Promotion { Code = "A", DiscountPrice = 130, ProductSku = "A", Quantity = 3, Type = "BuyXForY" });
             order.AddPromotion(new Promotion { Code = "B", DiscountPrice = 45, ProductSku = "B", Quantity = 3, Type = "BuyXForY" });
+
+            // Act
+            var engine = new CalculationEngine();
+
+            var result = engine.CalculateNetAmount(order);
+
+            // Assert
+            Assert.AreEqual(result, 370);
         }
 
     }
