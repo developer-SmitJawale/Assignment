@@ -13,6 +13,6 @@ namespace Assignment.Models
 
     public class Order : OrderBase
     {
-
+        public decimal NetAmount { get; set; }
     }
 }
