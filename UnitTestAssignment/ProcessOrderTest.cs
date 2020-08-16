@@ -26,5 +26,21 @@ namespace UnitTestAssignment
             // Assert
             Assert.AreEqual(result, 100);
         }
+
+        [TestMethod]
+        public void WithSingleProductPromotinOrderProcessdSuccessfully()
+        {
+            // Arrange
+            var order = new Order();
+
+            order.Cart = new Cart();
+            order.Cart.Items.Add(new CartItem { Product = new Product { Price = 50.0M, Sku = "A" }, Quantity = 5 });
+            order.Cart.Items.Add(new CartItem { Product = new Product { Price = 30.0M, Sku = "B" }, Quantity = 5 });
+            order.Cart.Items.Add(new CartItem { Product = new Product { Price = 20.0M, Sku = "C" }, Quantity = 1 });
+
+            order.AddPromotion(new Promotion { Code = "A", DiscountPrice = 130, ProductSku = "A", Quantity = 3, Type = "BuyXForY" });
+            order.AddPromotion(new Promotion { Code = "B", DiscountPrice = 45, ProductSku = "B", Quantity = 3, Type = "BuyXForY" });
+        }
+
     }
 }
