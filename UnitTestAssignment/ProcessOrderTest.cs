@@ -65,7 +65,7 @@ namespace UnitTestAssignment
             order.AddPromotion(new Promotion { Code = "A", DiscountPrice = 130, ProductSku = "A", Quantity = 3, Type = "BuyXForY" });
             order.AddPromotion(new Promotion { Code = "B", DiscountPrice = 45, ProductSku = "B", Quantity = 2, Type = "BuyXForY" });
             order.AddPromotion(new Promotion { Code = "CD", DiscountPrice = 30, ProductSku = "C", Quantity = 1, Type = "BuyXYForZ" });
-            order.AddPromotion(new Promotion { Code = "CD", DiscountPrice = 30, ProductSku = "C", Quantity = 1, Type = "BuyXYForZ" });
+            order.AddPromotion(new Promotion { Code = "CD", DiscountPrice = 30, ProductSku = "D", Quantity = 1, Type = "BuyXYForZ" });
 
             // Act
             var engine = new CalculationEngine();
