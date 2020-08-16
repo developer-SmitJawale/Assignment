@@ -12,6 +12,8 @@ namespace UnitTestAssignment
             // Arrange
             var order = new Order();
 
+            order.Cart = new Cart();
+
         }
     }
 }
